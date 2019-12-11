@@ -5,22 +5,22 @@ import java.io.Serializable;
 public class StateEntity implements Serializable {
 
 	private static final long serialVersionUID = 1L;
-	private Integer id;
+	private Long id;
 	private String name;
 
 	public StateEntity() {
 	}
 
-	public StateEntity(Integer id, String name) {
+	public StateEntity(Long id, String name) {
 		this.id = id;
 		this.name = name;
 	}
 
-	public Integer getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(Integer id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 

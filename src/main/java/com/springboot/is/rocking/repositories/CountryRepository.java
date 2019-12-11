@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.springboot.is.rocking.model.Country;
 
 @Repository("countryRepository")
-public interface CountryRepository extends CrudRepository<Country, Integer> {
+public interface CountryRepository extends CrudRepository<Country, Long> {
 
 }

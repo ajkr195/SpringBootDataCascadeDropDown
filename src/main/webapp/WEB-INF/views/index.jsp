@@ -20,6 +20,16 @@
 	src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
 	integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
 	crossorigin="anonymous"></script>
+
+<style>
+.control-label {
+	padding-top: 6px;
+}
+
+.pull-left {
+	margin-left: -25px; /* Try with different values until you are happy */
+}
+</style>
 </head>
 <body>
 	<div class="container">
@@ -31,9 +41,10 @@
 		<br>
 		<form>
 			<div class="row">
-				<label class="col-md-3 text-right" for="passwordConfirm">Country</label>
+				<label class="col-md-3 control-label text-right"
+					for="passwordConfirm">Country</label>
 				<div class="col-md-6">
-					<select id="dropdownCountry" class="form-control">
+					<select id="dropdownCountry" class="form-control pull-left">
 						<option value="countryvalue" disabled selected="selected">--
 							Select --</option>
 
@@ -48,9 +59,10 @@
 			<br>
 
 			<div class="row">
-				<label class="col-md-3 text-right" for="passwordConfirm">State</label>
+				<label class="col-md-3 control-label text-right"
+					for="passwordConfirm">State</label>
 				<div class="col-md-6">
-					<select id="dropdownState" class="form-control">
+					<select id="dropdownState" class="form-control pull-left">
 					</select>
 				</div>
 			</div>
@@ -58,9 +70,10 @@
 			<br>
 
 			<div class="row">
-				<label class="col-md-3 text-right" for="passwordConfirm">City</label>
+				<label class="col-md-3 control-label text-right"
+					for="passwordConfirm">City</label>
 				<div class="col-md-6">
-					<select id="dropdownCity" class="form-control">
+					<select id="dropdownCity" class="form-control pull-left">
 					</select>
 				</div>
 			</div>

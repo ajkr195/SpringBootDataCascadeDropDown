@@ -11,9 +11,9 @@ import com.springboot.is.rocking.model.State;
 import com.springboot.is.rocking.model.StateEntity;
 
 @Repository("stateRepository")
-public interface StateRepository extends CrudRepository<State, Integer> {
+public interface StateRepository extends CrudRepository<State, Long> {
 
 	@Query("select new com.springboot.is.rocking.model.StateEntity(id, name) from State where country.id = :id")
-	public List<StateEntity> findByCountry(@Param("id") int id);
+	public List<StateEntity> findByCountry(@Param("id") long id);
 
 }
