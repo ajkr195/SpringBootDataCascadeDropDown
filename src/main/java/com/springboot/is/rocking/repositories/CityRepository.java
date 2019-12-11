@@ -8,12 +8,11 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import com.springboot.is.rocking.model.City;
-import com.springboot.is.rocking.model.CityEntity;
 
 @Repository("cityRepository")
 public interface CityRepository extends CrudRepository<City, Long> {
 
-	@Query("select new com.springboot.is.rocking.model.CityEntity(id, name) from City where state.id = :id")
-	public List<CityEntity> findByState(@Param("id") long id);
+	@Query("select new City(id, name) from City where state.id = :id")
+	public List<City> findByState(@Param("id") long id);
 
 }

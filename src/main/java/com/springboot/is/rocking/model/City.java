@@ -26,6 +26,11 @@ public class City implements java.io.Serializable {
 		this.state = state;
 		this.name = name;
 	}
+	
+	public City(Long id, String name) {
+		this.id = id;
+		this.name = name;
+	}
 
 	@Id
 	@GeneratedValue(strategy = IDENTITY)

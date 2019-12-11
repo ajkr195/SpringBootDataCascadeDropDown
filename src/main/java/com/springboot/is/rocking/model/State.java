@@ -1,12 +1,14 @@
 package com.springboot.is.rocking.model;
 
+import static javax.persistence.GenerationType.IDENTITY;
+
 import java.util.HashSet;
 import java.util.Set;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
-import static javax.persistence.GenerationType.IDENTITY;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -28,6 +30,11 @@ public class State implements java.io.Serializable {
 
 	public State(Country country, String name) {
 		this.country = country;
+		this.name = name;
+	}
+	
+	public State(Long id, String name) {
+		this.id = id;
 		this.name = name;
 	}
 

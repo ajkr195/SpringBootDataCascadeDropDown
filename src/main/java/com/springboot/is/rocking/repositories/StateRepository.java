@@ -8,12 +8,14 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import com.springboot.is.rocking.model.State;
-import com.springboot.is.rocking.model.StateEntity;
 
 @Repository("stateRepository")
 public interface StateRepository extends CrudRepository<State, Long> {
 
-	@Query("select new com.springboot.is.rocking.model.StateEntity(id, name) from State where country.id = :id")
-	public List<StateEntity> findByCountry(@Param("id") long id);
+	@Query("select new State(id, name) from State where country.id = :id")
+
+	public List<State> findByCountry(@Param("id") long id);
+	
+//	@Query("SELECT u FROM User u WHERE u.status = ?1 and u.name = ?2")
 
 }

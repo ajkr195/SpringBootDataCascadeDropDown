@@ -5,7 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.springboot.is.rocking.model.CityEntity;
+import com.springboot.is.rocking.model.City;
 import com.springboot.is.rocking.repositories.CityRepository;
 
 @Service
@@ -15,7 +15,7 @@ public class CityServiceImpl implements CityService {
 	private CityRepository cityRepository;
 
 	@Override
-	public List<CityEntity> findByState(int id) {
+	public List<City> findByState(int id) {
 		return cityRepository.findByState(id);
 	}
 
