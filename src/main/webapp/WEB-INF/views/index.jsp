@@ -34,8 +34,8 @@
 <body>
 	<div class="container">
 		<div style="text-align: center">
-			<h2>Spring Boot Data JPA Hibernate</h2>
-			<h3>JQuery BootStrap</h3>
+			<h2>SpringBoot Data JPA Hibernate</h2>
+			<h3>AJAX JQuery BootStrap</h3>
 			<h4>Cascading Dropdown Example</h4>
 		</div>
 		<br>
@@ -46,7 +46,7 @@
 				<div class="col-md-6">
 					<select id="dropdownCountry" class="form-control pull-left">
 						<option value="countryvalue" disabled selected="selected">--
-							Select --</option>
+							Select Country --</option>
 
 						<c:forEach var="country" items="${countries }">
 
